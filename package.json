@@ -1,5 +1,5 @@
 {
-  "name": "rgba-regexp",
+  "name": "@simonpalepin/rgba-regexp",
   "version": "1.0.0",
   "description": "Generates strict RGBA/RGB string validation & supports css4 syntax.",
   "main": "dist/src/index.js",
@@ -38,6 +38,9 @@
     "ts-node": "^9.1.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "husky": {
     "hooks": {
