@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "lib": ["esnext", "dom"],
+    "strict": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "rootDir": "./",
+    "declaration": true,
+    "incremental": true,
+    "types": ["@types/jest"]
+  },
+  "include": ["src/**.ts"],
+  "exclude": ["**/*.spec.ts"]
+}
