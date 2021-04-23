@@ -1,4 +1,4 @@
-const num = /(?:255\.[0]+|255|(?:25[0-4]|[2][0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9])(?:\.\d+)?|\.\d+)/;
+const num = /((?:255\.[0]+|255|(?:25[0-4]|[2][0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9])(?:\.\d+)?|\.\d+))/;
 const percent = /((?:100\.[0]+|100|(?:[0-9]|[1-9][0-9])(?:\.\d+)?|\.\d+)%|[0]?\.\d+|1\.[0]+|1|0)/;
 const comma = /\s*,\s*/;
 const space = /\s*/;
@@ -24,8 +24,8 @@ function repeat(value: string, times: number) {
 function rgbaRegExp(type: RegExp, join: RegExp, alpha?: RegExp) {
   const parts = 
     `^${alpha ? 'rgba' : 'rgb'}\\(` +
-    `(${type.source})` +
-    repeat(`${join.source}(${type.source})`, 2) +
+    type.source +
+    repeat(`${join.source}${type.source}`, 2) +
     `${alpha ? alpha.source : ``}` +
     `\\)`
   ;
