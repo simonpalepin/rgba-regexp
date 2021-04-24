@@ -17,8 +17,8 @@ describe('Testing regex parts used to construct all rgba regexp', () => {
     expect(alphaCss4.test(' / 1.0')).toEqual(true);
     expect(alphaCss4.test(' / .25')).toEqual(true);
     expect(alphaCss4.test(' / 100%')).toEqual(true);
-    expect(alphaCss4.test(' / 1.25')).toEqual(false);
-    expect(alphaCss4.test(' / 100.25%')).toEqual(false);
+    expect(alphaCss4.test(' / 1.25')).toEqual(true);
+    expect(alphaCss4.test(' / 100.25%')).toEqual(true);
     expect(alphaCss4.test(' 1.25')).toEqual(false);
     expect(alphaCss4.test(' 100.25%')).toEqual(false);
   });
@@ -53,6 +53,5 @@ describe('Testing regex parts used to construct all rgba regexp', () => {
     expect(space.test('')).toEqual(true);
     expect(space.test(' ')).toEqual(true);
     expect(space.test('  ')).toEqual(true);
-    expect(space.test('-')).toEqual(false);
   });
 });
