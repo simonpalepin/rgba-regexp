@@ -1,4 +1,4 @@
-const num: RegExp = /((?:255\.[0]+|255|(?:25[0-4]|[2][0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9])(?:\.\d+)?|\.\d+))/;
+const number: RegExp = /((?:255\.[0]+|255|(?:25[0-4]|[2][0-4][0-9]|[1][0-9][0-9]|[1-9][0-9]|[0-9])(?:\.\d+)?|\.\d+))/;
 const percent: RegExp = /((?:100\.[0]+|100|(?:[0-9]|[1-9][0-9])(?:\.\d+)?|\.\d+)%|[0]?\.\d+|1\.[0]+|1|0)/;
 const comma: RegExp = /\s*,\s*/;
 const space: RegExp = /\s*/;
@@ -16,9 +16,9 @@ function rgbaRegExp(type: RegExp, join: RegExp, alpha?: RegExp): RegExp {
   return new RegExp(parts);
 }
 
-export const numRGBA: RegExp = rgbaRegExp(num, comma, alpha);
+export const numberRGBA: RegExp = rgbaRegExp(number, comma, alpha);
 export const percentRGBA: RegExp = rgbaRegExp(percent, comma, alpha);
-export const numRGB: RegExp = rgbaRegExp(num, comma);
+export const numberRGB: RegExp = rgbaRegExp(number, comma);
 export const percentRGB: RegExp = rgbaRegExp(percent, comma);
-export const numRGBACss4: RegExp = rgbaRegExp(num, space, alphaCss4);
+export const numberRGBACss4: RegExp = rgbaRegExp(number, space, alphaCss4);
 export const percentRGBACss4: RegExp = rgbaRegExp(percent, space, alphaCss4);
