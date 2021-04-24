@@ -13,6 +13,7 @@ describe('numberRGBA regular expression with capture groups', () => {
     expect(numberRGBA.test('rgba(0.100, .55, 0, .22%)')).toEqual(true);
     expect(numberRGBA.test('rgba(0.100, .55, 0, 0%)')).toEqual(true);
     expect(numberRGBA.test('rgba(0.100, .55, 0)')).toBeFalsy();
+    expect(numberRGBA.test('rgb(0.100, .55, 0, 1)')).toEqual(false);
   });
 
   it('should not match rgba without alpha', () => {

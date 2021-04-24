@@ -4,6 +4,8 @@ describe('numberRGB regular expression with perfect capture groups', () => {
   it('should match rgb(<number>, <number>, <number>)', () => {
     expect(numberRGB.test('rgb(100, 100.55, 255.0)')).toEqual(true);
     expect(numberRGB.test('rgb(0.100, .55, 0)')).toEqual(true);
+    expect(numberRGB.test('rgb(0.100, .55, 0, 1)')).toEqual(false);
+    expect(numberRGB.test('rgba(0.100, .55, 0)')).toEqual(false);
   });
 
   it('should not match rgb function with alpha argument', () => {
