@@ -1,5 +1,5 @@
 ## Goal
-Provide bulletproof RGB/RGBA regexp with css4 syntax support
+Provide bulletproof RGB/RGBA regexp with css4 syntax support. You use capture groups matches to extract values. 
 
 | RegExp | Color Space | Matches | Css Color Value
 | :------ | :------ | :------- | :------- |
